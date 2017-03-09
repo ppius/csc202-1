@@ -11,6 +11,12 @@ def par_checker(symbol_str):
       False
       >>> par_checker('((())')
       False
+      >>> par_checker('(3 + 5)')
+      True
+      >>> par_checker('(3 + 5) * (5 * (7 - 4))')
+      True
+      >>> par_checker('(3 + 5) * (5 * ((7 - 4))')
+      False
     """
     s = Stack()
     balanced = True
